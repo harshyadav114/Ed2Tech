@@ -42,7 +42,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js start",
     "eject": "react-scripts eject",
     "server": "cd server && npm run dev",
     "dev": "npx concurrently --kill-others-on-fail -n \"client,server\" -c \"bgBlue,bgYellow\" \"npm start\" \"npm run server\""

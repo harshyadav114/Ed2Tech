@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,body{
+    overflow-x: hidden;
+}
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #afb2bf;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #000814;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #afb2bf;
+  border-radius: 10px;
+  visibility: hidden;
+}
+
+*:active::-webkit-scrollbar-thumb,
+*:focus::-webkit-scrollbar-thumb,
+*:hover::-webkit-scrollbar-thumb {
+  visibility: visible;
+}
+
+/* Hide default styling of details/summary */
+details > summary {
+  list-style: none;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.code-border{
+    background: linear-gradient(
+    111.93deg,
+    rgba(14, 26, 45, 0.24) 40%,
+    rgba(17, 30, 50, 0.38) 90%
+    );
+    backdrop-filter: blur(2rem);
+    border: 1px solid;
+    border-image-source: linear-gradient(to right bottom, #ffffff38 20% , #ffffff00 40%);
+    border-image-slice: 1;
+}
+.circle1{
+    position: absolute;
+    background: linear-gradient(
+    123.77deg,
+    #8a2be2 -6.46%,
+    #ffa500 59.04%,
+    #f8f8ff 124.53%
+  );
+  border-radius: 100%;
+  filter: blur(9rem);
+  position:absolute;
+  left:0;
+  left:-2rem;
+}
+.homepage{
+    background-image: url("../src/assets/Images/bghome.svg");
+}
+.spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 9px solid #f1f2ff;
+    animation: spinner-bulqg1 0.8s infinite linear alternate,
+      spinner-oaa3wk 1.6s infinite linear;
+  }
+
+.form-style {
+    @apply rounded-lg bg-richblack-700 p-3 text-[16px] leading-[24px] text-richblack-5 shadow-[0_1px_0_0] shadow-white/50 placeholder:text-richblack-400 focus:outline-none;
+}
+.lable-style {
+    @apply text-[14px] text-richblack-5;
+}
+
+/*removed increment decrement from input number type*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@keyframes spinner-bulqg1 {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);
+  }
+
+  12.5% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%,
+      100% 0%
+    );
+  }
+
+  25% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 100%,
+      100% 100%,
+      100% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      50% 50%,
+      0 0,
+      50% 0%,
+      100% 0%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+
+  62.5% {
+    clip-path: polygon(
+      50% 50%,
+      100% 0,
+      100% 0%,
+      100% 0%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+
+  75% {
+    clip-path: polygon(
+      50% 50%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      100% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+
+  100% {
+    clip-path: polygon(
+      50% 50%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      50% 100%,
+      0% 100%
+    );
+  }
+}
+
+@keyframes spinner-oaa3wk {
+  0% {
+    transform: scaleY(1) rotate(0deg);
+  }
+
+  49.99% {
+    transform: scaleY(1) rotate(135deg);
+  }
+
+  50% {
+    transform: scaleY(-1) rotate(0deg);
+  }
+
+  100% {
+    transform: scaleY(-1) rotate(-135deg);
+  }
+}
+.swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+.section_heading {
+  @apply text-2xl font-bold text-richblack-5 lg:text-4xl;
+}
+.blackButton {
+  @apply cursor-pointer rounded-md bg-richblack-900 px-[20px] py-[8px] font-semibold text-richblack-5;
+}
+.yellowButton {
+  @apply cursor-pointer rounded-md bg-yellow-50 px-[20px] py-[8px] font-semibold text-richblack-900;
+}
